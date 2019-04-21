@@ -6,7 +6,6 @@ def get_first_name_of_season_winner(data, season)
       season_winner = winner_name[0]
       end
     end
-  end
   season_winner
 end
 
