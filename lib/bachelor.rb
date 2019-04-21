@@ -12,7 +12,7 @@ end
 def get_contestant_name(data, occupation)
   contestant_with_occupation = ""
   data.each do |season_num, contestants|
-    data[season].each do |contestant|
+    data[season_num].each do |contestant|
       if contestant["occupation"] == occupation
         contestant_with_occupation = contestant["name"]
       end
@@ -52,7 +52,7 @@ def get_average_age_for_season(data, season)
   
   data.each do |season_num, contestants|
     data[season_num].each do |contestant|
-        contestant_age = contestant["age"].to_f 
+        contestant_age = contestant["age"] 
         age += contestant_age.to_f
         number_of_contestants += 1 
     end
