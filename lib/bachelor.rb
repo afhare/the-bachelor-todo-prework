@@ -36,7 +36,7 @@ end
 def get_occupation(data, hometown)
   contestant_occupation_from_hometown = ""
   data.each do |season_num, contestants|
-    data[season_num].each do |contestant|
+    data[season_num].find do |contestant|
       if hometown == contestant["hometown"]
         contestant_occupation_from_hometown = contestant["occupation"]
       end
